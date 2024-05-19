@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 
 import 'package:greengrocer/src/configs/custom_colors.dart';
-import 'package:greengrocer/src/views/auth/components/custom_text_field.dart';
+
+import 'package:greengrocer/src/views/components/custom_text_field.dart';
 
 class SingUpScreen extends StatelessWidget {
   const SingUpScreen({super.key});

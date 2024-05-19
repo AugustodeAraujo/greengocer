@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:greengrocer/src/configs/custom_colors.dart';
+import 'package:greengrocer/src/views/cart/cart_tab.dart';
 import 'package:greengrocer/src/views/home/home_tab.dart';
-
+import 'package:greengrocer/src/views/profile/profile_tab.dart';
 
 class BaseScreen extends StatefulWidget {
   BaseScreen({super.key});
@@ -21,10 +23,10 @@ class _BaseScreenState extends State<BaseScreen> {
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: [
-          HomeTab(),
-          Container(color: Colors.green),
-          Container(color: Colors.blue),
+          const HomeTab(),
+          const CartTab(),
           Container(color: Colors.yellow),
+          const ProfileTab(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -36,7 +38,7 @@ class _BaseScreenState extends State<BaseScreen> {
           });
         },
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.green,
+        backgroundColor: CustomColors.customSwatchColor,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white.withAlpha(100),
         items: const [

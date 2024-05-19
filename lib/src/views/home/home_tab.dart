@@ -18,16 +18,16 @@ class _HomeTabState extends State<HomeTab> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
+          backgroundColor: CustomColors.customSwatchColor,
           elevation: 0,
           centerTitle: true,
           title: Text.rich(TextSpan(
             style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
             children: [
-              TextSpan(
+              const TextSpan(
                   text: 'Green',
                   style: TextStyle(
-                    color: CustomColors.customSwatchColor,
+                    color: Colors.white,
                   )),
               TextSpan(
                   text: 'grocer',
@@ -47,9 +47,9 @@ class _HomeTabState extends State<HomeTab> {
                     '2',
                     style: TextStyle(color: Colors.white, fontSize: 10),
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.shopping_cart,
-                    color: CustomColors.customSwatchColor,
+                    color: Colors.white,
                   ),
                 ),
               ),

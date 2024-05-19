@@ -4,12 +4,14 @@ class CustomTextField extends StatefulWidget {
   final IconData icon;
   final String label;
   final bool isSecret;
+  final String? initialValue;
 
   const CustomTextField(
       {super.key,
       required this.icon,
       required this.label,
-      required this.isSecret});
+      required this.isSecret,
+      this.initialValue});
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -30,6 +32,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 14),
       child: TextFormField(
+        initialValue: widget.initialValue,
         obscureText: isObscure,
         decoration: InputDecoration(
           prefixIcon: Icon(widget.icon),
